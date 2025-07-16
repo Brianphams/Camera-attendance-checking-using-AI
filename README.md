@@ -118,12 +118,8 @@ python
 Copy
 Edit
 yolo_model_path = "runs/detect/train/weights/best.pt"
-🔮 To Do
- Real-time webcam stream with tracking
 
- Export attendance results to .csv
 
- REST API for gallery enrollment
 
- Front-end dashboard for attendance visualization
+
 
