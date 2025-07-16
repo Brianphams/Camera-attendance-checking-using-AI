@@ -119,7 +119,6 @@ Copy
 Edit
 yolo_model_path = "runs/detect/train/weights/best.pt"
 
-
-
+<img width="1596" height="815" alt="image" src="https://github.com/user-attachments/assets/471b88f1-33e6-49e4-9cc1-b60470891205" />
 
 
