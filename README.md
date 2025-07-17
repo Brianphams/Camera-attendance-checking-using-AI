@@ -5,6 +5,7 @@ This project provides an end-to-end AI system that uses YOLOv11-nano (small and 
 It supports both real-time display and API-based video upload for batch processing.
 
 📌 Features
+
 🔍 Lightweight face detection using YOLOv11n (nano) – optimized for speed and low-resource systems.
 
 🧠 Deep face recognition using FaceNet with cosine similarity.
@@ -99,9 +100,12 @@ Alice confirmed with vote ratio: 0.85
 Bob confirmed with vote ratio: 0.73
 
 ✅ Best face images saved to: Data/best_faces
+
 ⚠️ Warning: Unknown person detected in the video.
+
 ⚙️ Configuration
 Parameter	Location	Description
+
 gallery_file	gallery_module.py	Path to .pkl gallery
 yolo_model_path	main.py / app.py	Path to YOLOv11n weights (.pt)
 match_threshold	recognize_face_facenet()	Similarity match for initial filtering
@@ -109,15 +113,7 @@ unknown_threshold	recognize_face_facenet()	Threshold to classify unknown face
 similarity_threshold	verify_attendance()	Cosine similarity pass threshold
 vote_threshold	verify_attendance()	% of embeddings that must match
 
-📸 YOLOv11n (nano) Model
-You should train or fine-tune your YOLOv11n face detection model using the Ultralytics framework.
-
-Set your best weights path:
-
-python
-Copy
-Edit
-yolo_model_path = "runs/detect/train/weights/best.pt"
+📸 A picture sample of our detection and recognition from camera ai :
 
 <img width="1596" height="815" alt="image" src="https://github.com/user-attachments/assets/471b88f1-33e6-49e4-9cc1-b60470891205" />
 
