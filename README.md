@@ -55,56 +55,13 @@ fastapi, uvicorn – API service (optional)
 numpy, torch, pickle, etc.
 
 📽️ How It Works
-🔹 1. Register Faces
-Place images of each person into separate folders under Data/ImageReg/ (e.g. ImageReg/Alice, ImageReg/Bob).
-
-Run gallery_module.py to extract face embeddings and save them to gallery_facenet1.pkl.
+🔹 1. Register Faces 
 
 🔹 2. Process Video
-You can process a video locally with live display using:
 
-bash
-Copy
-Edit
-python main.py
-What happens:
-
-YOLOv11n detects faces every frame.
-
-FaceNet compares them to the gallery.
-
-Best face images are stored.
-
-Final attendance is verified based on vote ratio.
-
-🔹 3. Upload via API (Optional)
-Run FastAPI server:
-
-bash
-Copy
-Edit
-uvicorn app:app --reload
-Send a request using curl or Postman:
-
-bash
-Copy
-Edit
-curl -X POST "http://localhost:8000/uploadvideo" \
-     -F "video=@/path/to/video.mp4"
-✅ Output Example
-sql
-Copy
-Edit
---- Final Attendance ---
-Alice confirmed with vote ratio: 0.85
-Bob confirmed with vote ratio: 0.73
-
-✅ Best face images saved to: Data/best_faces
-
-⚠️ Warning: Unknown person detected in the video.
-
-⚙️ Configuration
-Parameter	Location	Description
+🔹 3. Upload video via API (Optional)
+🔹 4. Recognition Processing
+🔹 5. Fast API ( optional ) return recognized faces from model 
 
 gallery_file	gallery_module.py	Path to .pkl gallery
 yolo_model_path	main.py / app.py	Path to YOLOv11n weights (.pt)
